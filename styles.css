@@ -1,0 +1,73 @@
+:root {
+  --Blue: hsl(246, 80%, 60%);
+  --Dark-blue: hsl(235, 46%, 20%);
+  --Light-red: hsl(15, 100%, 70%);
+  --Lime-green: hsl(145, 58%, 55%);
+  --Violet: hsl(264, 64%, 52%);
+  --Soft-orange: hsl(43, 84%, 65%);
+  --Light-blue: hsl(236, 44%, 20%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+  color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    background-color: var(--Dark-blue);
+    height: 100vh;
+  }
+  a a:active a:hover {
+    text-decoration: none;
+  }
+  .container {
+    width: fit-content;
+    display: flex;
+    margin: 0 auto;
+    padding-top: 2em;
+  }
+  .container .report-container {
+    width: 100px;
+    margin-right: 1.5em;
+  }
+  .container .report {
+    width: 100%;
+    background-color: var(--Blue);
+    padding: 1.5em;
+    padding-bottom: 5em;
+    border-radius: 1em;
+    position: relative;
+    z-index: 2;
+  }
+  .container .report img {
+    width: 100%;
+    margin-bottom: 2em;
+    border-radius: 100%;
+    border: solid white 4px;
+  }
+  .container .time-option {
+    background-color: var(--Light-blue);
+    padding: 1.5em;
+    padding-top: 2.8em;
+    padding-left: 1.7em;
+    display: flex;
+    border-radius: 0 0 1em 1em;
+    flex-direction: column;
+    transform: translateY(-1em);
+    z-index: 1;
+  }
+  .container .time-option button {
+    margin: 0.5em 0;
+    background: transparent;
+    text-align: left;
+    outline: none;
+    border: none;
+    font-size: 1em;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+  }
+}
