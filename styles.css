@@ -1,7 +1,12 @@
+@import url("https://fonts.google.com/specimen/Rubik");
+
 :root {
   --Blue: hsl(246, 80%, 60%);
   --Dark-blue: hsl(235, 46%, 20%);
-  --Light-red: hsl(15, 100%, 70%);
+  --Very-Dark-blue: hsl(226, 43%, 10%);
+  --Light-orange: hsl(15, 100%, 70%);
+  --Soft-blue: hsl(195, 74%, 62%);
+  --Light-red: hsl(348, 100%, 68%);
   --Lime-green: hsl(145, 58%, 55%);
   --Violet: hsl(264, 64%, 52%);
   --Soft-orange: hsl(43, 84%, 65%);
@@ -16,58 +21,143 @@
   color: #fff;
 }
 
-@media screen and (min-width: 768px) {
-  main {
-    background-color: var(--Dark-blue);
-    height: 100vh;
-  }
-  a a:active a:hover {
-    text-decoration: none;
-  }
-  .container {
-    width: fit-content;
-    display: flex;
-    margin: 0 auto;
-    padding-top: 2em;
-  }
-  .container .report-container {
-    width: 100px;
-    margin-right: 1.5em;
-  }
-  .container .report {
-    width: 100%;
-    background-color: var(--Blue);
-    padding: 1.5em;
-    padding-bottom: 5em;
-    border-radius: 1em;
-    position: relative;
-    z-index: 2;
-  }
-  .container .report img {
-    width: 100%;
-    margin-bottom: 2em;
-    border-radius: 100%;
-    border: solid white 4px;
-  }
-  .container .time-option {
-    background-color: var(--Light-blue);
-    padding: 1.5em;
-    padding-top: 2.8em;
-    padding-left: 1.7em;
-    display: flex;
-    border-radius: 0 0 1em 1em;
-    flex-direction: column;
-    transform: translateY(-1em);
-    z-index: 1;
-  }
-  .container .time-option button {
-    margin: 0.5em 0;
-    background: transparent;
-    text-align: left;
-    outline: none;
-    border: none;
-    font-size: 1em;
-    letter-spacing: 0.5px;
-    cursor: pointer;
-  }
+main {
+  background-color: var(--Very-Dark-blue);
+  height: 100vh;
+}
+a a:active,
+a:hover {
+  text-decoration: none;
+}
+.container {
+  width: fit-content;
+  display: flex;
+  margin: 0 auto;
+  padding-top: 2em;
+}
+.container .report-container {
+  width: 300px;
+  margin-right: 1.5em;
+}
+.container .report {
+  width: 100%;
+  background-color: var(--Blue);
+  padding: 1.5em;
+  padding-bottom: 5em;
+  border-radius: 1em;
+  position: relative;
+  z-index: 2;
+}
+.container .report img {
+  width: 30%;
+  margin-bottom: 2em;
+  border-radius: 100%;
+  border: solid white 4px;
+}
+.container .time-option {
+  background-color: hsl(235, 46%, 20%);
+  padding: 1.5em;
+  padding-top: 2.8em;
+  padding-left: 1.7em;
+  display: flex;
+  border-radius: 0 0 1em 1em;
+  flex-direction: column;
+  transform: translateY(-1em);
+  z-index: 1;
+}
+.container .time-option button {
+  margin: 0.5em 0;
+  background: transparent;
+  text-align: left;
+  outline: none;
+  border: none;
+  font-size: 1em;
+  letter-spacing: 0.5px;
+  transition: 0.7s ease-in-out all;
+  cursor: pointer;
+}
+.time-option button:hover {
+  color: #85c5f0;
+}
+.container .report-info-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+}
+.report-info-container {
+  min-width: 900px;
+}
+.report-info {
+  background-color: var(--Light-blue);
+  padding: 1.5em 2em;
+  border-radius: 1em;
+  transform: translateY(-0.8em);
+  transition: 0.7s ease-in-out all;
+  cursor: pointer;
+}
+.report-info:hover {
+  background-color: #6258b9;
+}
+.report-info .title {
+  display: flex;
+  justify-content: space-between;
+  width: 100;
+  font-size: 1.1em;
+}
+.report-info h2 {
+  font-weight: 200;
+  font-size: 4em;
+  margin: 0.4em 0;
+}
+.port {
+  height: 50px;
+  border-radius: 1em 1em 0 0;
+}
+.working .port {
+  background-image: url("images/icon-work.svg");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-color: var(--Light-orange);
+}
+.play .port {
+  background-image: url("images/icon-play.svg");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-color: var(--Soft-blue);
+}
+.study .port {
+  background-image: url("images/icon-study.svg");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-color: var(--Light-red);
+}
+.exercise .port {
+  background-image: url("images/icon-exercise.svg");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-color: var(--Lime-green);
+}
+.social .port {
+  background-image: url("images/icon-social.svg");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-color: var(--Violet);
+}
+.self-care .port {
+  background-image: url("images/icon-self-care.svg");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-color: var(--Soft-orange);
+}
+
+.last-time {
+  color: hsl(0, 1%, 72);
+}
+
+.text-btn {
+  color: hsl(0, 1%, 72%);
+}
+.big-report-text {
+  font-size: 4rem;
+  font-weight: 100;
 }
